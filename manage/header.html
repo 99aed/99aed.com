@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>99AED Admin Panel</title>
+<link href="../SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/lightview.css"/>
+<script src="../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="scripts/spinners.min.js"></script>
+<script type="text/javascript" src="scripts/lightview.js"></script>
+</head>
+<body>
+<div id="header" style="background-color:#000000">
+<img src="../images/_admin_logo.png" />
+</div>
+<div>
+<ul id="MenuBar1" class="MenuBarHorizontal">
+  <li><a class="MenuBarItemSubmenu" href="index.php"><img src="../images/icons/home--arrow.png" alt=""/>Home</a>
+      <ul>       
+        <li><a href="faq.php">Q &amp; A</a></li>     
+        
+      </ul>
+  </li>
+  <li><a class="MenuBarItemSubmenu" href="javascript:void(0);">Deals</a>
+      <ul>
+        <li><a href="CreateDeal.php">Create Deal</a></li>
+        <li><a href="index.php?page=review">Review Deals</a></li>
+        <li><a href="index.php?page=live">Live Deals</a></li>
+        <li><a href="index.php?page=approved">Approved Deals</a></li>
+        <li><a href="index.php?page=cancelled">Canceled Deals</a></li>
+       <!-- <li><a href="index.php?page=draft">Draft Deals</a></li>-->
+        <li><a href="index.php?page=failed">Failed Deals</a></li>
+       <!-- <li><a href="index.php?page=pending">Pending Deals</a></li>-->
+        <li><a href="index.php?page=returned">Returned  Deals</a></li>
+        <!--<li><a href="index.php?page=tipped">Tipped Deals</a></li>-->
+        <li><a href="index.php?page=show-all">show All</a></li>
+        <li><a class="MenuBarItemSubmenu" href="#">Categories</a>
+        <ul><a href="createcat.php?action=create"
+                       class="lightview"
+                       data-lightview-type="ajax"
+                       data-lightview-options="
+                       ajax: { 
+                              type: 'post',
+                               
+                             }
+                             ">Create Category</a><!--<a href="createcat.php?action=create">Create Category</a>-->
+        <a href="Category.php">List Category</a></ul>
+        </li>
+      </ul>
+  </li>
+  <li><a class="MenuBarItemSubmenu" href="indexinsta.php?page=live">Instant</a>
+      <ul>
+        <li><a href="CreateInsta.php">Create Instant</a></li>
+        <li><a href="indexinsta.php?page=review">Review Instant</a></li>
+        <li><a href="indexinsta.php?page=live">Live Instant</a></li>
+        <li><a href="indexinsta.php?page=approved">Approved Instant</a></li>
+        <li><a href="indexinsta.php?page=cancelled">Cancelled Instant</a></li>
+        <li><a href="indexinsta.php?page=failed">Failed Instant</a></li>
+       <!-- <li><a href="indexinsta.php?page=draft">Draft Instant</a></li>-->
+        <!--<li><a href="indexinsta.php?page=pending">Pending Instant</a></li>-->
+        <li><a href="indexinsta.php?page=returned">Returned Instant</a></li>
+        <li><a href="indexinsta.php?page=showall">show All</a></li>
+      </ul>
+  </li>
+  <li><a class="MenuBarItemSubmenu" href="#">Orders</a>
+      <ul>
+         <!--<li><a href="indexorder.php?page=current">Current Order</a></li>-->
+         <li><a href="indexorder.php?page=paid">Paid Order</a></li>
+         <li><a href="indexorder.php?page=cancelled">Cancelled Order</a></li>
+        <!-- <li><a href="indexorder.php?page=commision">Commission</a></li>-->
+      </ul>
+  </li>
+  
+  <li><a class="MenuBarItemSubmenu" href="indexcoupon.php?page=unused">Coupons</a>
+      <ul>
+         <li><a href="indexcoupon.php?page=unused">Not used</a></li>
+         <li><a href="indexcoupon.php?page=used">Used</a></li>
+         <li><a href="indexcoupon.php?page=expired">Expired</a></li>
+         <li><a href="indexcoupon.php?page=current">Current Vouchers</a></li>
+         <li><a href="createcoupon.php">Create Voucher</a></li>               
+      </ul>
+  </li>
+  <li><a class="MenuBarItemSubmenu" href="indexuser.php?page=userlist">Users</a>
+      <ul>
+         <li><a href="indexuser.php?page=userlist">User List</a></li>
+         <li><a href="indexuser.php?page=adminlist">Admin List</a></li>
+         <li><a href="Createadmin.php">Add Admin User</a></li> 
+         <li><a href="indexuser.php?page=partners">Partners List</a></li>                       
+      </ul>
+  </li>
+  
+  <li></li>
+  <li><a class="MenuBarItemSubmenu" href="#">System</a>
+      <ul>
+         <li><a href="Settings.php?page=settings">General Settings</a></li>        
+         <li><a href="Settings.php?page=translation">Manage Translations</a></li>
+                             
+      </ul>
+  </li>
+</ul>
+</div>
+<script type="text/javascript">
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"../../SpryAssets/SpryMenuBarDownHover.gif", imgRight:"../../SpryAssets/SpryMenuBarRightHover.gif"});
+//-->
+</script>
+</body>
+</html>
