@@ -100,7 +100,7 @@ echo '<br/><br/>';
 
 					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table" style="font-size:12px; width:880px">
 
-					<tr><th width="30">ID</th><th width="100">Email</th><th width="150">UserName</th><th width="20">City</th><th width="80" nowrap>Balance</th><th width="80" nowrap>Postcode</th><th width="80" nowrap>RegisterIP</th><th width="80">Registertime</th><th width="80" nowrap>Tel.</th><th width="80" nowrap>Ban User</th></tr>
+					<tr><th width="30">ID</th><th width="80">Email</th><th width="80">FirstName</th><th width="80">LastName</th><th width="20">City</th><th width="80" nowrap>IP</th><th width="80">Registertime</th><th width="80" nowrap>Contact Num</th><th width="80" nowrap>Ban User</th></tr>
               <?php
 			  while($result = mysql_fetch_array($selectquery))
 			  {
@@ -108,18 +108,12 @@ echo '<br/><br/>';
               <tr>
                 <td style="text-align:center"><?php echo $result["ID"] ?></td>
                 <td style="text-align:center"><?php echo $result["email"] ?></td>
-                <td style="text-align:center"><?php echo $result["username"] ?></td>
-                <td style="text-align:center">
-				<?php 
-				 $cityname = selectcity($result["city_id"]);
-				 echo $cityname;
-				 ?>
-                 </td>                
-                <td style="text-align:center"><?php echo $result["money"] ?></td>
-                <td style="text-align:center"><?php echo $result["zipcode"] ?></td>
+                <td style="text-align:center"><?php echo $result["fname"] ?></td>
+                <td style="text-align:center"><?php echo $result["lname"] ?></td>
+                <td style="text-align:center"><?php echo $result["city_name"]?></td>                
                 <td style="text-align:center"><?php echo $result["ip"] ?></td>
                 <td style="text-align:center"><?php echo $result["create_time"] ?></td>
-                <td style="text-align:center"><?php echo $result["mobilr"] ?></td>
+                <td style="text-align:center"><?php echo $result["mobile"] ?></td>
                 <td style="text-align:center"><a href="indexuser.php?actions=banuser&id=<?php echo $result["ID"] ?>">BanUser</a></td>
                 <td style="text-align:center">
 				<?php 
